@@ -1,0 +1,6 @@
+@Ultracar.API_HostAddress = http://localhost:5244
+
+GET {{Ultracar.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

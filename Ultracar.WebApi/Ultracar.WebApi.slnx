@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="Ultracar.API/Ultracar.API.csproj" />
+    <Project Path="Ultracar.Application/Ultracar.Application.csproj" />
+    <Project Path="Ultracar.Domain/Ultracar.Domain.csproj" />
+    <Project Path="Ultracar.Infrastructure/Ultracar.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/testes/">
+    <Project Path="Ultracar.Testes/Ultracar.Tests.csproj" />
+  </Folder>
+</Solution>

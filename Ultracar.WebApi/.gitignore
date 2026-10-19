@@ -1,0 +1,40 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio
+.vs/
+
+# Logs
+*.log
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+
+# Backup & temp files
+*.bak
+*.tmp
+*.temp
+
+# Publish outputs
+publish/
+wwwroot/
+
+# Configurações locais
+appsettings.Development.json
+appsettings.Local.json
+
+# Docker
+docker-compose.override.yml
