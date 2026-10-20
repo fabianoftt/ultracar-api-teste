@@ -1,7 +1,9 @@
-﻿namespace Ultracar.Application.Interfaces.Oficinas
+﻿using Ultracar.Application.Dtos.Request;
+
+namespace Ultracar.Application.Interfaces.Oficinas
 {
     public interface IPostSugestoesService
     {
-        public string PostSugestoesService();
+        Task<string> SalvarSugestao(SugestaoRequest request);
     }
 }

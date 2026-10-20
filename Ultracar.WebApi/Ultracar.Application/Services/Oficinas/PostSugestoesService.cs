@@ -1,10 +1,11 @@
-﻿using Ultracar.Application.Interfaces.Oficinas;
+﻿using Ultracar.Application.Dtos.Request;
+using Ultracar.Application.Interfaces.Oficinas;
 
 namespace Ultracar.Application.Services.Oficinas
 {
     public class PostSugestoesService : IPostSugestoesService
     {
-        string IPostSugestoesService.PostSugestoesService()
+        public async Task<string> SalvarSugestao(SugestaoRequest request)
         {
             throw new NotImplementedException();
         }

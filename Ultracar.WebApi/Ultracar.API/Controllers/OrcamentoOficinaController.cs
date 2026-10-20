@@ -45,57 +45,66 @@ namespace Ultracar.API.Controllers
         }
 
         [HttpGet("{placa}")]
-        public IActionResult GetVeiculo(string placa)
+        public async Task<IActionResult> GetVeiculo(string placa)
         {
-            return Ok();
+            var veiculo = _getVeiculoService.ObterVeiculo(placa);
+            return Ok(veiculo);
         }
 
         [HttpGet("diagnosticos")]
-        public IActionResult GetDisgnostico([FromQuery] string busca)
+        public async Task<IActionResult> GetDiagnostico([FromQuery] string busca)
         {
-            return Ok();
+            var lista = _getDisgnosticoService.ObterDiagnostico(busca);
+            return Ok(lista);
         }
 
         [HttpPost("sugestoes")]
-        public IActionResult Sugestoes([FromBody] SugestaoRequest request)
+        public async Task<IActionResult> Sugestoes([FromBody] SugestaoRequest request)
         {
-            return Ok();
+            var sucesso = _postSugestoesService.SalvarSugestao(request);
+            return Ok(sucesso);
         }
 
         [HttpPost("/api/v1/ordens-servico/{osId}/orcamento")]
-        public IActionResult PostOrcamento(int osId)
+        public async Task<IActionResult> PostOrcamento(int osId)
         {
-            return Created();
+            var sucesso = _postOrcamentoService.SalvarOrcamento(osId);
+            return Created("", "");
         }
 
         [HttpGet("/api/v1/orcamentos/{id}")]
-        public IActionResult GetOrcamento(int id)
+        public async Task<IActionResult> GetOrcamento(int id)
         {
-            return Ok();
+            var retorno = _getOrcamentoOficinaService.ObterOrcamento(id);
+            return Ok(retorno);
         }
 
         [HttpPut("/api/v1/orcamentos/{id}/itens")]
-        public IActionResult PutItens(int id, [FromBody] List<ItemRequest> itens)
+        public async Task<IActionResult> PutItens(int id, [FromBody] List<ItemRequest> itens)
         {
+            var sucesso = _putItensOficinaService.AlterarItensOficina(id, itens);
             return Ok(new { id, itens });
         }
 
         [HttpPost("/api/v1/orcamentos/{id}/envio")]
-        public IActionResult PostEnvio(int id)
+        public async Task<IActionResult> PostEnvio(int id)
         {
-            return Ok();
+            var sucesso = _postEnvioOficinaService.EnviarOficina(id);
+            return Ok(sucesso);
         }
 
         [HttpPost("/api/v1/orcamentos/{id}/revisao")]
-        public IActionResult PostRevisao(int id)
+        public async Task<IActionResult> PostRevisao(int id)
         {
-            return Ok();
+            var sucesso = _postRevisaoOficinaService.RevisarOrcamento(id);
+            return Ok(sucesso);
         }
 
         [HttpGet("/api/v1/orcamentos/{id}/historico")]
-        public IActionResult GetHistorico(int id)
+        public async Task<IActionResult> GetHistorico(int id)
         {
-            return Ok();
+            var listaHistorico = _getHistoricoOficinaService.ObterHistorico(id);
+            return Ok(listaHistorico);
         }
     }
 }

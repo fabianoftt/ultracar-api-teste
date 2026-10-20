@@ -2,6 +2,6 @@
 {
     public interface IGetHistoricoOficinaService
     {
-        public string GetHistoricoOficinaService_();
+        Task<string> ObterHistorico(int id);
     }
 }

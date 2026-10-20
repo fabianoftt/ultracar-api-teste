@@ -2,6 +2,6 @@
 {
     public interface IGetVeiculoService
     {
-        public string GetVeiculosService();
+        Task<string> ObterVeiculo(string placa);
     }
 }

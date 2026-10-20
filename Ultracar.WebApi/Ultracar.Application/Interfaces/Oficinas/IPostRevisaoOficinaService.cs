@@ -2,6 +2,6 @@
 {
     public interface IPostRevisaoOficinaService
     {
-        public bool PostRevisaoOficinaService();
+        Task<string> RevisarOrcamento(int id);
     }
 }

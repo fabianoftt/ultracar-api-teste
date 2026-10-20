@@ -2,6 +2,6 @@
 {
     public interface IPostOrcamentoService
     {
-        public bool PostOrcamentoService();
+        Task<string?> SalvarOrcamento(int osId);
     }
 }

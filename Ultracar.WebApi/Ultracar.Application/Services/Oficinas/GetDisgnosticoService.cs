@@ -4,9 +4,9 @@ namespace Ultracar.Application.Services.Oficinas
 {
     public class GetDisgnosticoService : IGetDisgnosticoService
     {
-        public string GetDiagnostico()
+        public async Task<string> ObterDiagnostico(string busca)
         {
-            return "";
+            throw new NotImplementedException();
         }
     }
 }

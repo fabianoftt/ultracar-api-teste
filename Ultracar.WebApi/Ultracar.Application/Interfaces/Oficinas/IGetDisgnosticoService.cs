@@ -2,6 +2,6 @@
 {
     public interface IGetDisgnosticoService
     {
-        public string GetDiagnostico();
+        Task<string> ObterDiagnostico(string busca);
     }
 }

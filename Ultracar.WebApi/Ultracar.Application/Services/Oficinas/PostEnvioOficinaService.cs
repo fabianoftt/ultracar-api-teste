@@ -4,7 +4,7 @@ namespace Ultracar.Application.Services.Oficinas
 {
     public class PostEnvioOficinaService : IPostEnvioOficinaService
     {
-        bool IPostEnvioOficinaService.PostEnvioOficinaService()
+        public async Task<string> EnviarOficina(int id)
         {
             throw new NotImplementedException();
         }

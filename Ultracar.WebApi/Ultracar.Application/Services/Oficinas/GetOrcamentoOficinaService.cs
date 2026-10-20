@@ -4,9 +4,9 @@ namespace Ultracar.Application.Services.Oficinas
 {
     public class GetOrcamentoOficinaService : IGetOrcamentoOficinaService
     {
-        public string GetOrcamentoOficinaServices()
+        public async Task<string> ObterOrcamento(int id)
         {
-            return "";
+            throw new NotImplementedException();
         }
     }
 }

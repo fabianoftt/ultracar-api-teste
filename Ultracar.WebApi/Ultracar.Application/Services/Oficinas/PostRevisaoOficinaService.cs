@@ -4,7 +4,7 @@ namespace Ultracar.Application.Services.Oficinas
 {
     public class PostRevisaoOficinaService : IPostRevisaoOficinaService
     {
-        bool IPostRevisaoOficinaService.PostRevisaoOficinaService()
+        public async Task<string> RevisarOrcamento(int id)
         {
             throw new NotImplementedException();
         }

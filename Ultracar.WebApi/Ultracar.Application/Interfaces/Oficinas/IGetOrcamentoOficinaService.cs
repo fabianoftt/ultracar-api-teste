@@ -2,6 +2,6 @@
 {
     public interface IGetOrcamentoOficinaService
     {
-        public string GetOrcamentoOficinaServices();
+        Task<string> ObterOrcamento(int id);
     }
 }

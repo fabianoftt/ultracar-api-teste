@@ -4,9 +4,9 @@ namespace Ultracar.Application.Services.Oficinas
 {
     public class GetHistoricoOficinaService : IGetHistoricoOficinaService
     {
-        public string GetHistoricoOficinaService_()
+        public async Task<string> ObterHistorico(int id)
         {
-            return "";
+            throw new NotImplementedException();
         }
     }
 }

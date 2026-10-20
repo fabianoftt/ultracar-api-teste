@@ -2,6 +2,6 @@
 {
     public interface IPostEnvioOficinaService
     {
-        public bool PostEnvioOficinaService();
+        Task<string> EnviarOficina(int id);
     }
 }

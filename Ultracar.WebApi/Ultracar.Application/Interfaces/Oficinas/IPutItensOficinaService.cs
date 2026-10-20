@@ -1,7 +1,9 @@
-﻿namespace Ultracar.Application.Interfaces.Oficinas
+﻿using Ultracar.Application.Dtos.Request;
+
+namespace Ultracar.Application.Interfaces.Oficinas
 {
     public interface IPutItensOficinaService
     {
-        public string PutItensOficinaService();
+        Task<string> AlterarItensOficina(int id, List<ItemRequest> itens);
     }
 }

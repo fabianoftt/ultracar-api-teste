@@ -4,7 +4,7 @@ namespace Ultracar.Application.Services.Oficinas
 {
     public class PostOrcamentoService : IPostOrcamentoService
     {
-        bool IPostOrcamentoService.PostOrcamentoService()
+        public async Task<string?> SalvarOrcamento(int osId)
         {
             throw new NotImplementedException();
         }
