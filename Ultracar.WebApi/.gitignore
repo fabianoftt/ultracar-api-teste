@@ -28,6 +28,9 @@ packages/
 *.tmp
 *.temp
 
+# Ignorar pasta .vs (Visual Studio)
+.vs/
+
 # Publish outputs
 publish/
 wwwroot/
