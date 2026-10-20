@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Ultracar.Application.Dtos.Request;
 using Ultracar.Application.Interfaces.Cliente;
-using Ultracar.Application.Services.Clientes;
 
 namespace Ultracar.API.Controllers
 {
@@ -23,15 +22,16 @@ namespace Ultracar.API.Controllers
         }
 
         [HttpGet("{token}")]
-        public IActionResult GetOrcamento(string token)
+        public async Task<IActionResult> GetOrcamento(string token)
         {
-            return Ok();
+            var listaOrcamento = _getOrcamentoClienteService.ObterOrcamentoClienteService(token);
+            return Ok(listaOrcamento);
         }
 
         [HttpPost("{token}/decisao")]
-        public IActionResult PostDecisao(string token, [FromBody] DecisaoRequest request)
+        public async Task<IActionResult> PostDecisao(string token, [FromBody] DecisaoRequest request)
         {
-
+            var listaOrcamento = _postOrcamentoClienteService.SalvarDecisaoOrcamentoClienteService(request);
             return Ok();
         }
     }
