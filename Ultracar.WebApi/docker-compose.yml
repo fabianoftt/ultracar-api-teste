@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  api:
+    build:
+      context: ./Ultracar.API
+      dockerfile: Dockerfile
+    container_name: ultracar_api
+    ports:
+      - "5000:80"               # expõe a API na porta 5000
+    depends_on:
+      - postgres
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=ultracar_db;Username=ultracar;Password=ultracar123
+
+  postgres:
+    image: postgres:15
+    container_name: ultracar_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ultracar
+      POSTGRES_PASSWORD: ultracar123
+      POSTGRES_DB: ultracar_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
