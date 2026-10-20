@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Ultracar.Application.Interfaces.Oficinas;
 
 namespace Ultracar.Application.Services.Oficinas
 {
-    public class OficinaService : IOficinaService
+    public class PutItensOficinaService : IPutItensOficinaService
     {
-        public string ObterVeiculoPelaPlaca(string placa)
+        string IPutItensOficinaService.PutItensOficinaService()
         {
             throw new NotImplementedException();
         }
