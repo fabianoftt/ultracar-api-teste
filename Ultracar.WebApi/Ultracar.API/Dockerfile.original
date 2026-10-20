@@ -10,19 +10,19 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
 # Copia os csproj de cada projeto
-COPY Ultracar.WebApi/Ultracar.API/Ultracar.API.csproj Ultracar.WebApi/Ultracar.API/
+COPY Ultracar.API/Ultracar.API.csproj Ultracar.API/
 COPY Ultracar.Application/Ultracar.Application.csproj Ultracar.Application/
 COPY Ultracar.Domain/Ultracar.Domain.csproj Ultracar.Domain/
 COPY Ultracar.Infrastructure/Ultracar.Infrastructure.csproj Ultracar.Infrastructure/
 
 # Restaura dependências
-RUN dotnet restore Ultracar.WebApi/Ultracar.API/Ultracar.API.csproj
+RUN dotnet restore Ultracar.API/Ultracar.API.csproj
 
 # Copia o restante do código
 COPY . .
 
 # Define o diretório de trabalho para build
-WORKDIR /src/Ultracar.WebApi/Ultracar.API
+WORKDIR /src/Ultracar.API
 RUN dotnet build -c $BUILD_CONFIGURATION -o /app/build
 
 # Publish stage
