@@ -1,5 +1,6 @@
-﻿using Ultracar.Application.Clientes;
-using Ultracar.Application.Oficinas;
+﻿using Ultracar.Application.Interfaces.Cliente;
+using Ultracar.Application.Services.Clientes;
+using Ultracar.Application.Services.Oficinas;
 
 namespace Ultracar.API.Extensions
 {
@@ -9,7 +10,8 @@ namespace Ultracar.API.Extensions
         {
             // Registra os serviços
             services.AddScoped<IOficinaService, OficinaService>();
-            services.AddScoped<IClienteService, ClienteService>();
+            services.AddScoped<IGetOrcamentoClienteService, GetOrcamentoClienteService>();
+            services.AddScoped<IPostOrcamentoClienteService, PostOrcamentoClienteService>();
 
             return services;
         }

@@ -1,4 +1,4 @@
-﻿namespace Ultracar.Application.Oficinas
+﻿namespace Ultracar.Application.Services.Oficinas
 {
     public interface IOficinaService
     {

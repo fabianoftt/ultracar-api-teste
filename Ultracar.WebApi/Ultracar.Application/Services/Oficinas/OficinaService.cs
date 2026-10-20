@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ultracar.Application.Oficinas
+namespace Ultracar.Application.Services.Oficinas
 {
     public class OficinaService : IOficinaService
     {
