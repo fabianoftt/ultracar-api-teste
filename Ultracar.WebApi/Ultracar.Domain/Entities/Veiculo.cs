@@ -4,13 +4,13 @@
     {
         public class Veiculo
         {
+            protected Veiculo() { }
+
             public int Id { get; private set; }
             public string Placa { get; private set; }
             public int MarcaId { get; private set; }
             public int ModeloId { get; private set; }
             public int Ano { get; private set; }
-
-            protected Veiculo() { }
 
             public Veiculo(string placa, int marcaId, int modeloId, int ano)
             {
@@ -33,5 +33,4 @@
             }
         }
     }
-
 }

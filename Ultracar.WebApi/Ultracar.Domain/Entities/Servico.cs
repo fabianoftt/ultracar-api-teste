@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Ultracar.Domain.Entities
+﻿namespace Ultracar.Domain.Entities
 {
     public class Servico
     {
+        protected Servico() { }
+
         public int Id { get; private set; }
         public string Descricao { get; private set; }
         public double TempoPadraoHoras { get; private set; }
-
-        protected Servico() { }
 
         public Servico(string descricao, double tempoPadraoHoras)
         {

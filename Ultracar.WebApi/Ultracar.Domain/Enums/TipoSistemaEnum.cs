@@ -1,4 +1,4 @@
-﻿namespace Ultracar.Domain.Entities
+﻿namespace Ultracar.Domain.Enums
 {
     public enum TipoSistema
     {

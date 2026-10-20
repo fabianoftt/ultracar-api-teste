@@ -1,4 +1,6 @@
-﻿namespace Ultracar.Domain.Entities
+﻿using Ultracar.Domain.Enums;
+
+namespace Ultracar.Domain.Entities
 {
     public class Diagnostico
     {
