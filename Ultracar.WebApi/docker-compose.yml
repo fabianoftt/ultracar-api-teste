@@ -1,8 +1,7 @@
-version: '3.9'
 services:
   api:
     build:
-      context: ./Ultracar.API
+      context: ./Ultracar.API/Dockerfile   # pasta onde está o Dockerfile
       dockerfile: Dockerfile
     container_name: ultracar_api
     ports:

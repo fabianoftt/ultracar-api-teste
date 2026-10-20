@@ -12,7 +12,10 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
+COPY ["Ultracar.API.csproj", "Ultracar.API/"]
 COPY ["Ultracar.API/Ultracar.API.csproj", "Ultracar.API/"]
+COPY ["Ultracar.Application/Ultracar.Application.csproj", "Ultracar.Application/"]
+COPY ["Ultracar.Infrastructure/Ultracar.Infrastructure.csproj", "Ultracar.Infrastructure/"]
 RUN dotnet restore "./Ultracar.API/Ultracar.API.csproj"
 COPY . .
 WORKDIR "/src/Ultracar.API"
